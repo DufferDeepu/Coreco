@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import { auth } from "@/auth";
 import { SessionProvider } from "next-auth/react"
+import { Toaster } from "@/components/ui/sonner";
 
 
 export const metadata: Metadata = {
@@ -44,7 +45,7 @@ export default async function RootLayout({
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
         />
-        <meta name="apple-mobile-web-app-title" content="Gradii" />
+        <meta name="apple-mobile-web-app-title" content="Coreco" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="mobile-web-app-capable" content="yes" />
@@ -59,6 +60,10 @@ export default async function RootLayout({
             disableTransitionOnChange
           >
         {children}
+         <div className="flex flex-col min-h-screen">
+              <Toaster/>
+              <div className="flex-1">{children}</div>
+            </div>
         </ThemeProvider>
       </body>
     </html>
