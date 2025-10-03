@@ -182,6 +182,7 @@ const TerminalComponent = forwardRef<TerminalRef, TerminalProps>(({
 
       // Show new prompt
       writePrompt();
+      writePrompt();
 
     } catch (error) {
       if (term.current) {

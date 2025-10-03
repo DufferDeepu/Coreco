@@ -354,7 +354,7 @@ const WebContainerPreview: React.FC<WebContainerPreviewProps> = ({
               webContainerInstance={instance}
               theme="dark"
               className="h-full"
-            />
+            />``
           </div>
         </div>
       )}
